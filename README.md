@@ -28,8 +28,15 @@ FCM이란
 웹 푸시를 구현하기 위해서는 서비스 워커를 설정해야 합니다.
 서비스워커 스크립트 파일은 public 폴더에 firebase-message-sw.js 라는 이름으로 따로 생성해주어야 합니다.
 위에서 생성한 SDK을 참고하여 firebase-message-sw.js에 설정
-importScripts('https://www.gstatic.com/firebasejs/4.8.1/firebase-app.js'); importScripts('https://www.gstatic.com/firebasejs/4.8.1/firebase-messaging.js');
+<div>
+importScripts('https://www.gstatic.com/firebasejs/4.8.1/firebase-app.js'); 
+</div>
+<div>
+importScripts('https://www.gstatic.com/firebasejs/4.8.1/firebase-messaging.js');
+</div>
+<div>
 // Initialize Firebase
+  <div>
 var config = {
     apiKey: "",
     authDomain: "",
@@ -38,6 +45,7 @@ var config = {
     messagingSenderId: "",
     appId: ""
 };
+  </div>
 firebase.initializeApp(config);
 
 const messaging = firebase.messaging();
@@ -50,7 +58,7 @@ messaging.setBackgroundMessageHandler(function(payload){
 
     return self.registration.showNotification(title,options);
 });
-
+</div>
 ### 테스트 방법
 1. main.html에서 token 생성처리 및 console을 통해 token 조회가능
 <img src="https://github.com/yoojadoni/firebase-web/blob/master/token.png" width="100%" height="20%"/>
