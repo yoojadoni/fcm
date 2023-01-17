@@ -1,0 +1,37 @@
+server:
+  tomcat:
+    uri-encoding: UTF-8
+
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      #ddl-auto: update
+      ddl-auto: create
+    properties:
+      hibernate:
+        show-sql: true
+        format_sql: true
+        default_batch_fetch_size: 100
+        dialect : org.hibernate.dialect.H2Dialect
+
+  datasource:
+    url: jdbc:h2:mem:test
+    username: sa
+    password: 123400
+    driver-class-name: org.h2.Driver
+    #sql-script-encoding: UTF-8
+
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true
+
+
+  devtools:
+    livereload:
+      enabled: true
+
+fcm:
+  certification: fcmproject-e4b13-firebase-adminsdk-sf8m0-4cf0bddfac.json
